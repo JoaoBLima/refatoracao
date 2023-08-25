@@ -14,7 +14,16 @@ namespace CodeSmellRefactor
         public string Telefone { get; set; }
         public string Email { get; set; }
 
-        public override string ToString()
+        public Pessoa(string nome, int idade, string endereco, string telefone, string email)
+        {
+            Nome = nome;
+            Idade = idade;
+            Endereco = endereco;
+            Telefone = telefone;
+            Email = email;
+        }
+
+        public override string ToString() //criaçao do tostring para melhorar a representação do texto.
         {
             return $"Nome: {Nome}\nIdade: {Idade}\nEndereço: {Endereco}\nTelefone: {Telefone}\nE-mail: {Email}";
         }
